@@ -1,0 +1,46 @@
+{
+	"name": "finstagram-the-instagram-clone",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "nodemon server.js",
+		"start": "node server.js",
+		"test": "jest --NODE_ENV=test --forceExit",
+		"test-dev": "jest --watch"
+	},
+	"jest": {
+		"testEnvironment": "node"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@sendgrid/mail": "^7.1.1",
+		"bcryptjs": "^2.4.3",
+		"cloudinary": "^1.22.0",
+		"compression": "^1.7.4",
+		"cookie-parser": "^1.4.5",
+		"cors": "^2.8.5",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"express-mongo-sanitize": "^2.0.0",
+		"helmet": "^3.22.0",
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^5.9.18",
+		"morgan": "^1.10.0",
+		"multer": "^1.4.2",
+		"sharp": "^0.25.3",
+		"validator": "^13.0.0",
+		"xss-clean": "^0.1.1"
+	},
+	"devDependencies": {
+		"jest": "^24.9.0",
+		"nodemon": "^2.0.4",
+		"supertest": "^4.0.2"
+	},
+	"engines": {
+		"node": "14.15.0",
+		"npm": "7.17.0"
+	}
+}
