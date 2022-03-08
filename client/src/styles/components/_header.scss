@@ -1,0 +1,116 @@
+header {
+	position: sticky;
+	// position: sticky doesn't work if parent i.e. body has overflow: hidden
+	top: 0;
+	height: 4rem;
+	width: 100vw;
+	z-index: 999;
+}
+
+.header {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background-color: $primary-color;
+	box-shadow: #aaa 0 0 3px;
+	margin-bottom: 30px;
+}
+
+.header-content {
+	max-width: 50rem;
+	margin: 0 auto;
+	display: flex;
+	align-items: flex-end;
+	padding-top: 0.6vh;
+	justify-content: space-between;
+}
+
+.header-toast {
+	text-transform: uppercase;
+	font-family: $primary-font;
+	p {
+		font-size: 1.3rem;
+	}
+	button {
+		margin: 10px 0;
+		font-family: $primary-font;
+		outline: none;
+		text-transform: uppercase;
+		border: none;
+		background-color: transparent;
+		margin-right: 10px;
+		font-weight: 600;
+		font-size: 0.95rem;
+		text-decoration: none;
+		cursor: pointer;
+	}
+	.header-toast-logout {
+		color: #7b11df;
+		svg {
+			width: 22px;
+			height: 22px;
+		}
+	}
+}
+
+.header-logo {
+	a {
+		font-family: $secondary-font;
+		font-size: 2.2rem;
+		font-weight: bold;
+		text-decoration: none;
+		background: $gradient-color;
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		margin-left: 0.8rem;
+	}
+	svg {
+		margin: 1rem 0 0 1rem;
+	}
+}
+
+.header-navLinks {
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	li {
+		margin-right: 1rem;
+		margin-left: 1rem;;
+		font-weight: 600;
+		color: $link-color;
+		position: relative;
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+.discover-icon a svg {
+	font-size: 1.8rem;
+	color: lighten($secondary-color, 20%);
+}
+
+.bell-icon a svg {
+	font-size: 1.8rem;
+	color: lighten($secondary-color, 20%);
+}
+
+.notif-red-dot {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 7px;
+	height: 7px;
+	background-color: #ef5350;
+	border-radius: 50%;
+}
+
+.header-profile {
+	width: 2rem;
+	border-radius: 100%;
+	cursor: pointer;
+}
+

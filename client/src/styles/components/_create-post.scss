@@ -1,0 +1,48 @@
+input[type="file"] {
+	display: none;
+}
+
+.upload-post-label {
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	margin-top: 40px;
+	border: 1.4px dashed lighten($secondary-color, 30%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	color: lighten($secondary-color, 10%);
+	svg {
+		font-size: 1.8rem;
+	}
+	p {
+		font-size: 0.9rem;
+		margin-top: 10px;
+	}
+}
+
+.searchResults {
+	min-height: 20px;
+	min-width: 100%;
+	position: relative;
+}
+
+.locationSearch-results {
+	position: absolute;
+	width: 100%;
+	height: auto;
+	z-index: 999;
+	background-color: $primary-color;
+	border-radius: 4px;
+	padding: 5px 10px;
+	box-shadow: #ccc 1px 1px 3px;
+}
+
+.searchLocation {
+	margin-bottom: 3px;
+	padding: 3px 0;
+	border-bottom: #ccc 1px solid;
+	cursor: pointer;
+}

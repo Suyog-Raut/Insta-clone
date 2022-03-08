@@ -1,0 +1,220 @@
+.postCard {
+	display: flex;
+	flex-direction: column;
+	background-color: $primary-color;
+	margin: 3rem 0.4rem;
+	padding: 0.6rem;
+	border-radius: 4px;
+	border: 1px solid lighten($secondary-color, 60%);
+}
+
+.postCard__userInfo {
+  width: 100%;
+	display: flex;
+	align-items: center;
+  position: relative;
+	img {
+		margin-left: 10px;
+		width: 40px;
+		border-radius: 100%;
+	}
+	.postCard__userInfo-meta {
+		display: flex;
+		flex-direction: column;
+		padding-left: 35px;
+	}
+	.postCard__userInfo-username {
+		font-size: 1rem;
+		font-family: $primary-font;
+		font-weight: 600;
+		background-clip: text;
+		background: $gradient-color;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		cursor: pointer;
+	}
+	.postCard__location {
+		margin-top: 5px;
+		margin-left: -1px;
+		a {
+			color: $secondary-color;
+			text-decoration: none;
+			font-size: 0.8rem;
+			font-weight: bold;
+		}
+	}
+}
+
+.postCard__downvote {
+  margin-left: auto;
+  margin-right: 15px;
+  display: flex;
+  font-size: 1.35rem ;
+  align-items: center;
+  p {
+    color: #f44336;
+  }
+  svg {
+    cursor: pointer;
+    color: #888;
+    font-size: 1.6rem;
+  }
+}
+
+.postCard__trending {
+	margin-top: 10px;
+	font-size: 1.6rem;
+	p {
+		font-family: $secondary-font;
+		font-weight: bold;
+		background: $alternate-gradient-color;
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		width: auto;
+	}
+}
+
+.postCard__image {
+	position: relative;
+	width: 100%;
+	img {
+		position: relative;
+		width: 100%;
+		margin-top: 10px;
+	}
+}
+
+.postCase__image-like {
+	font-size: 20rem;
+	position: absolute;
+	top: 50%;
+	margin-top: -10rem;
+	left: 50%;
+	margin-left: -10rem;
+	z-index: 99;
+	fill: #fafafa;
+	-webkit-filter: drop-shadow(0 0 6px #888);
+	filter: drop-shadow(0 0 6px #888);
+	animation: toggleAnimation 0.3s ease;
+}
+
+@media only screen and (max-width: 500px) {
+	.postCase__image-like {
+		font-size: 10rem;
+		top: 50%;
+		margin-top: -5rem;
+		left: 50%;
+		margin-left: -5rem;
+		-webkit-filter: drop-shadow(0 0 4px #888);
+		filter: drop-shadow(0 0 4px #888);
+	}
+}
+
+.postCard__meta--icons {
+	svg {
+		font-size: 28px;
+		margin-top: 5px;
+		margin-right: 10px;
+		color: $secondary-color;
+		animation: toggleAnimation 0.3s ease;
+	}
+}
+
+@keyframes toggleAnimation {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.postCard__likes {
+	margin-top: 4px;
+	color: $link-color;
+	font-family: $primary-font;
+	cursor: pointer;
+	background: $gradient-color;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.postCard__caption {
+	display: flex;
+	align-items: center;
+	margin-top: 3px;
+}
+
+.postCard__caption--username {
+	color: $link-color;
+	font-weight: 600;
+	background-clip: text;
+	background: $gradient-color;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+}
+
+.postCard__caption--body {
+	margin-left: 5px;
+}
+
+.postCard__comments {
+	text-decoration: none;
+	p {
+		color: $link-color;
+		margin-top: 6px;
+		background-clip: text;
+		text-decoration: none;
+		background: $gradient-color;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		cursor: pointer;
+	}
+}
+
+.postCard__date {
+	font-size: 0.9rem;
+	margin-top: 10px;
+	color: lighten($secondary-color, 30%);
+}
+
+.timeline-end {
+	text-align: center;
+	margin-top: 0;
+	padding-top: 0;
+	color: lighten($secondary-color, 30%);
+	font-size: 2rem;
+	padding-bottom: 20px;
+}
+
+.timeline-loader {
+	width: 30px;
+	height: 30px;
+	display: block;
+	margin: 0 auto;
+	border-radius: 50%;
+	background-color: $secondary-color;
+	margin-bottom: 20px;
+	animation: toggleAnimationFade 1.2s ease infinite;
+}
+
+@keyframes toggleAnimationFade {
+	0% {
+		opacity: 0.4;
+		transform: scale(0.8);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0.4;
+		transform: scale(0.8);
+	}
+}
